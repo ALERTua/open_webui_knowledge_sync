@@ -1,3 +1,5 @@
+"""open_webui_knowledge_sync/tests/test_filesystem.py"""
+
 from pathlib import Path
 
 from open_webui_knowledge_sync.backends.filesystem import should_include, should_exclude

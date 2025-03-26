@@ -1,14 +1,14 @@
-from __future__ import annotations
+"""open_webui_knowledge_sync/models/files.py"""
 
-from typing import Optional
+from __future__ import annotations
 
 from pydantic import BaseModel, ConfigDict
 
 
 class FileMeta(BaseModel):
-    name: Optional[str] = None
-    content_type: Optional[str] = None
-    size: Optional[int] = None
+    name: str | None = None
+    content_type: str | None = None
+    size: int | None = None
 
     model_config = ConfigDict(extra="allow")
 
@@ -25,27 +25,27 @@ class FileModel(BaseModel):
 
     id: str
     user_id: str
-    hash: Optional[str] = None
+    hash: str | None = None
 
     filename: str
-    path: Optional[str] = None
+    path: str | None = None
 
-    data: Optional[dict] = None
-    meta: Optional[dict] = None
+    data: dict | None = None
+    meta: dict | None = None
 
-    access_control: Optional[dict] = None
+    access_control: dict | None = None
 
-    created_at: Optional[int]  # timestamp in epoch
-    updated_at: Optional[int]  # timestamp in epoch
+    created_at: int | None  # timestamp in epoch
+    updated_at: int | None  # timestamp in epoch
 
 
 class FileModelResponse(BaseModel):
     id: str
     user_id: str
-    hash: Optional[str] = None
+    hash: str | None = None
 
     filename: str
-    data: Optional[dict] = None
+    data: dict | None = None
     meta: FileMeta
 
     created_at: int  # timestamp in epoch

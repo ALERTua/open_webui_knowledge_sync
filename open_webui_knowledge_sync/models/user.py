@@ -1,3 +1,5 @@
+"""open_webui_knowledge_sync/models/user.py"""
+
 from pydantic import BaseModel
 
 

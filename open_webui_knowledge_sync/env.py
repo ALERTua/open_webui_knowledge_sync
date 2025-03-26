@@ -1,3 +1,5 @@
+"""open_webui_knowledge_sync/env.py"""
+
 import os
 
 from dotenv import load_dotenv

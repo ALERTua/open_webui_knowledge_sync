@@ -57,7 +57,7 @@ ignore = [
     "S104", # Possible binding to all interfaces
 ]
 [lint.per-file-ignores]
-"__init__.py" = ["F401", "D104"]
+"**/__init__.py" = ["F401", "D104", "E402"]
 "tests/*.py" = ["S101", "D103", "ANN201", "D100"]
 
 [lint.flake8-quotes]

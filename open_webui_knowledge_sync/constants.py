@@ -1,3 +1,5 @@
+"""open_webui_knowledge_sync/constants.py"""
+
 EXCLUDES = [
     "**/.*",
     "**/.*/",
@@ -10,6 +12,7 @@ EXCLUDES = [
     "**/.venv/",
     "**/*.lock",
     "**/*.tmp",
+    "*~",
 ]
 
 INCLUDES = [
@@ -25,3 +28,4 @@ INCLUDES = [
     # r"*.jpeg",
     r"*.*",
 ]
+REQUEST_TIMEOUT = 600

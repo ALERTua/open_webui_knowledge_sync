@@ -1,11 +1,11 @@
-from __future__ import annotations
-from typing import Optional
+"""open_webui_knowledge_sync/models/knowledge.py"""
 
+from __future__ import annotations
 
 from pydantic import BaseModel, ConfigDict
 
-from open_webui_knowledge_sync.models.files import FileMetadataResponse, FileModel
-from open_webui_knowledge_sync.models.user import UserResponse
+from open_webui_knowledge_sync.models.user import UserResponse  # noqa: TC001
+from open_webui_knowledge_sync.models.files import FileMetadataResponse, FileModel  # noqa: TC001
 
 
 class KnowledgeFileIdForm(BaseModel):
@@ -21,17 +21,17 @@ class KnowledgeModel(BaseModel):
     name: str
     description: str
 
-    data: Optional[dict] = None
-    meta: Optional[dict] = None
+    data: dict | None = None
+    meta: dict | None = None
 
-    access_control: Optional[dict] = None
+    access_control: dict | None = None
 
     created_at: int  # timestamp in epoch
     updated_at: int  # timestamp in epoch
 
 
 class KnowledgeResponse(KnowledgeModel):
-    files: Optional[list[FileMetadataResponse | dict]] = None
+    files: list[FileMetadataResponse | dict] | None = None
 
 
 class KnowledgeFilesResponse(KnowledgeResponse):
@@ -39,19 +39,19 @@ class KnowledgeFilesResponse(KnowledgeResponse):
 
 
 class KnowledgeUserModel(KnowledgeModel):
-    user: Optional[UserResponse] = None
+    user: UserResponse | None = None
 
 
 class KnowledgeResponse(KnowledgeModel):
-    files: Optional[list[FileMetadataResponse | dict]] = None
+    files: list[FileMetadataResponse | dict] | None = None
 
 
 class KnowledgeUserResponse(KnowledgeUserModel):
-    files: Optional[list[FileMetadataResponse | dict]] = None
+    files: list[FileMetadataResponse | dict] | None = None
 
 
 class KnowledgeForm(BaseModel):
     name: str
     description: str
-    data: Optional[dict] = None
-    access_control: Optional[dict] = None
+    data: dict | None = None
+    access_control: dict | None = None

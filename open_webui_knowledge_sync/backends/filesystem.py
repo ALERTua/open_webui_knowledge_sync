@@ -1,3 +1,5 @@
+"""open_webui_knowledge_sync/backends/filesystem.py"""
+
 import fnmatch
 from pathlib import Path
 
@@ -17,16 +19,8 @@ def should_include(path: Path):
 def get_filtered_files(directory: Path):
     """Recursively find files matching INCLUDES while avoiding EXCLUDES."""
     all_files = directory.rglob("**/*")  # Get all files and directories
-    filtered_files = [
-        _ for _ in all_files
-        if _.is_file() and not should_exclude(_) and should_include(_)
-    ]
-    return filtered_files
+    return [_ for _ in all_files if _.is_file() and not should_exclude(_) and should_include(_)]
 
 
 if __name__ == "__main__":
-    # _directory = Path("C:\\Users\\alexe\\Nextcloud\\Medical\\ALERT")
-    _directory = Path("V:\\projects\\hass-gaggiuino")
-    _all_files = _directory.rglob("**/*")
-    for f in _all_files:
-        print(f"{f}: exclude: {should_exclude(f)} include: {should_include(f)}")
+    pass

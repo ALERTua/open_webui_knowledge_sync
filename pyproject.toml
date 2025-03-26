@@ -9,6 +9,7 @@ dependencies = [
     "python-dotenv>=1.0.1",
     "requests>=2.32.3",
     "typer>=0.15.2",
+    "watchdog>=6.0.0",
 ]
 
 [dependency-groups]
@@ -20,7 +21,8 @@ dev = [
 ]
 
 [project.scripts]
-cli = "open_webui_knowledge_sync.entrypoints.cli:app"
+owui_sync = "open_webui_knowledge_sync.entrypoints.sync:app"
+owui_watch = "open_webui_knowledge_sync.entrypoints.watch:app"
 
 [tool.uv]
 package = true
