@@ -2507,19 +2507,25 @@ name = "open-webui-knowledge-sync"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "open-webui" },
     { name = "python-dotenv" },
     { name = "requests" },
     { name = "typer" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "open-webui" },
+]
+
 [package.metadata]
 requires-dist = [
-    { name = "open-webui", specifier = ">=0.5.20" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "typer", specifier = ">=0.15.2" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "open-webui", specifier = ">=0.5.20" }]
 
 [[package]]
 name = "openai"
