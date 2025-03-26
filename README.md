@@ -15,7 +15,7 @@ Repository: https://github.com/ALERTua/open_webui_knowledge_sync
 ## Requirements
 
 - Open WebUI instance
-- [UV](https://docs.astral.sh/uv/getting-started/installation/)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
 
 ## Installation
