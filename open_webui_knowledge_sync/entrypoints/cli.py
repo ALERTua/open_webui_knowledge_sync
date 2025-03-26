@@ -1,15 +1,14 @@
 from __future__ import annotations
 
-from typing import Annotated, TYPE_CHECKING
+from pathlib import Path  # noqa: TC003
+
+from typing import Annotated
 
 import typer
 
 from open_webui_knowledge_sync.backends.filesystem import get_filtered_files
 from open_webui_knowledge_sync.backends.openwebui.knowledge import OpenWebUIKnowledgeAPI
 from open_webui_knowledge_sync.backends.openwebui.files import OpenWebUIFilesAPI
-
-if TYPE_CHECKING:
-    from pathlib import Path
 
 app = typer.Typer(add_completion=False)
 
