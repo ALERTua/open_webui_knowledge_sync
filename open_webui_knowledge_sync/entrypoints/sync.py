@@ -77,6 +77,8 @@ def sync(  # noqa: C901
         elif p.is_dir():
             files.extend(get_filtered_files(p))
 
+    files = list(set(files))
+
     owf = OpenWebUIFilesAPI(url=url, token=token)
     uploaded = False
     typer.echo(f"Processing {len(files)} files...")

@@ -123,13 +123,15 @@ def watch(
 
     knowledge_id = knowledge.id
 
-    _watch(paths=path, knowledge_id=knowledge_id, url=url, token=token, cleanup=cleanup)
+    paths = list(set(path))
+    _watch(paths=paths, knowledge_id=knowledge_id, url=url, token=token, cleanup=cleanup)
 
 
 if __name__ == "__main__":
     app(
         [
             "--knowledge=open-webui-knowledge-sync",
+            "V:\\projects\\open-webui-knowledge-sync",
             "V:\\projects\\open-webui-knowledge-sync",
         ],
     )
