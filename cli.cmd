@@ -1,3 +1,3 @@
 
 @echo off
-uv run open_webui_knowledge_sync %*
+uv run --no-dev open_webui_knowledge_sync %*
