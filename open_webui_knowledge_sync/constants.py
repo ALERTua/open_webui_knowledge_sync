@@ -8,7 +8,7 @@ EXCLUDES = [
     "**/build/",
     "**/dist/",
     "**/wheels/",
-    "**/*.egg-info",
+    "**/*.egg-info/",
     "**/.venv/",
     "**/*.lock",
     "**/*.tmp",

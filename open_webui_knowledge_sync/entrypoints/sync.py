@@ -77,8 +77,6 @@ def sync(  # noqa: C901
         elif p.is_dir():
             files.extend(get_filtered_files(p))
 
-    files = list(set(files))
-
     owf = OpenWebUIFilesAPI(url=url, token=token)
     uploaded = False
     typer.echo(f"Processing {len(files)} files...")
@@ -97,3 +95,12 @@ def sync(  # noqa: C901
     if cleanup and uploaded:
         typer.echo("Cleaning up files")
         owf.cleanup()
+
+
+if __name__ == "__main__":
+    app(
+        [
+            "--knowledge=open-webui-knowledge-sync",
+            "V:\\projects\\open-webui-knowledge-sync",
+        ],
+    )

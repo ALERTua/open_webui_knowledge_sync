@@ -123,8 +123,7 @@ def watch(
 
     knowledge_id = knowledge.id
 
-    paths = list(set(path))
-    _watch(paths=paths, knowledge_id=knowledge_id, url=url, token=token, cleanup=cleanup)
+    _watch(paths=path, knowledge_id=knowledge_id, url=url, token=token, cleanup=cleanup)
 
 
 if __name__ == "__main__":
