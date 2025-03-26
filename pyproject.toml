@@ -5,8 +5,12 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = "==3.12.*"
 dependencies = [
-    "open-webui>=0.5.20",
     "python-dotenv>=1.0.1",
     "requests>=2.32.3",
     "typer>=0.15.2",
+]
+
+[dependency-groups]
+dev = [
+    "open-webui>=0.5.20",
 ]
