@@ -49,8 +49,8 @@ def sync(
                 help="Directory to sync. Can be used multiple times."
             ),
         ] = None,
-        url: str = None,
-        token: str = None,
+        url: Annotated[str, typer.Option(help="Open-WebUI URL. E.g. http://localhost:8080")] = None,
+        token: Annotated[str, typer.Option(help="Open-WebUI Token")] = None,
         cleanup: Annotated[
             bool,
             typer.Option(
