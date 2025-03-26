@@ -9,7 +9,7 @@ from open_webui_knowledge_sync.backends.filesystem import get_filtered_files
 from open_webui_knowledge_sync.backends.openwebui.knowledge import OpenWebUIKnowledgeAPI
 from open_webui_knowledge_sync.backends.openwebui.files import OpenWebUIFilesAPI
 
-app = typer.Typer()
+app = typer.Typer(add_completion=False)
 
 
 # noinspection PyShadowingBuiltins
