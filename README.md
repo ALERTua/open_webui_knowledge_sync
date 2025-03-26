@@ -46,5 +46,5 @@ This package provides two main command-line tools:
 - `owui_watch`: Continuous monitoring and synchronization of files
 
 For detailed usage instructions, see:
-- [Sync Usage](docs/sync-readme)
+- [Sync Usage](docs/sync-readme.md)
 - [Watch Usage](docs/watch-readme.md)
