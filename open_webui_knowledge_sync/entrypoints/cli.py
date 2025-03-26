@@ -13,7 +13,7 @@ app = typer.Typer()
 
 
 # noinspection PyShadowingBuiltins
-@app.command()
+@app.command(no_args_is_help=True)
 def sync(
         knowledge_id: Annotated[
             str,
