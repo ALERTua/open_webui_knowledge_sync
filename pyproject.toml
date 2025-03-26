@@ -18,3 +18,10 @@ dev = [
     "pytest>=8.3.5",
     "ruff>=0.11.2",
 ]
+
+[project.scripts]
+cli = "open_webui_knowledge_sync.entrypoints.cli:app"
+
+[tool.uv]
+package = true
+default-groups = []
