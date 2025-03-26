@@ -2541,7 +2541,7 @@ wheels = [
 [[package]]
 name = "open-webui-knowledge-sync"
 version = "0.1.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "pydantic" },
     { name = "python-dotenv" },
