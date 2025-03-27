@@ -1,18 +1,18 @@
 """open_webui_knowledge_sync/constants.py"""
 
 EXCLUDES = [
-    "**/.*",
-    "**/.*/",
-    "**/__pycache__/",
-    "*.py[oc]",
-    "**/build/",
-    "**/dist/",
-    "**/wheels/",
-    "**/*.egg-info/",
-    "**/.venv/",
-    "**/*.lock",
-    "**/*.tmp",
-    "*~",
+    r".*/",
+    r"__pycache__/",
+    r"build/",
+    r"dist/",
+    r"wheels/",
+    r"*.egg-info/",
+    r".venv/",
+    r"**/.*",
+    r"*.py[oc]",
+    r"**/*.lock",
+    r"**/*.tmp",
+    r"*~",
 ]
 
 INCLUDES = [
