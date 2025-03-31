@@ -32,11 +32,13 @@ cd open_webui_knowledge_sync
 uv sync
 ```
 
+
 ## Settings
 
 You can save the effort of providing the CLI with the Open WebUI URL and Token for each execution
 by creating an `.env` file from [.env.example](.env.example) and filling it with the environment variables.
 Or you can just fill those in your system.
+
 
 ## Command-line Tools
 
@@ -48,3 +50,8 @@ This package provides two main command-line tools:
 For detailed usage instructions, see:
 - [Sync Usage](docs/sync-readme.md)
 - [Watch Usage](docs/watch-readme.md)
+
+
+## Caveats
+
+- Do not forget to raise the context length of your prompt!
