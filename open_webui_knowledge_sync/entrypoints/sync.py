@@ -66,7 +66,7 @@ def sync(  # noqa: C901
     knowledge = owk.get_knowledge(knowledge)
     if knowledge is None:
         typer.echo(f"Couldn't find Knowledge: {knowledge}")
-        raise typer.Abort
+        raise typer.Exit(code=1)
 
     knowledge_id = knowledge.id
 
