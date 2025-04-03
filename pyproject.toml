@@ -1,6 +1,6 @@
 [project]
 name = "open-webui-knowledge-sync"
-version = "0.1.1"
+version = "0.1.2"
 description = "Python CLI tool for synchronizing local files with Open WebUI knowledge bases."
 readme = "README.md"
 requires-python = "==3.12.*"
