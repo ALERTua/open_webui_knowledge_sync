@@ -25,6 +25,7 @@ logger = logging.getLogger(__name__)
 class OpenWebUIKnowledgeAPI:
     def __init__(self, url=OPEN_WEBUI_URL, token=OPEN_WEBUI_TOKEN):
         self.url = url or OPEN_WEBUI_URL
+        self.url = self.url.rstrip("/")
         self.token = token or OPEN_WEBUI_TOKEN
         self.base_url = f"{self.url}/api/v1/knowledge"
         self.headers_auth = {
@@ -106,14 +107,14 @@ class OpenWebUIKnowledgeAPI:
         self,
         knowledge_id: str,
         file_id: str,
-    ) -> KnowledgeFilesResponse | None:
+    ) -> KnowledgeResponse | None:
         url = f"{self.base_url}/{knowledge_id}/file/add"
         data = {"file_id": file_id}
         response = requests.post(url, headers=self.headers, json=data, timeout=REQUEST_TIMEOUT)
         if response.status_code != requests.status_codes.codes.ok:
             return None
 
-        return KnowledgeFilesResponse(**response.json())
+        return KnowledgeResponse(**response.json())
 
     def update_file_from_knowledge_by_id(
         self,
