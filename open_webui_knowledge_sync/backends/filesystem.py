@@ -43,7 +43,22 @@ def should_include(path: Path):
 def get_filtered_files(directory: Path):
     """Recursively find files matching INCLUDES while avoiding EXCLUDES."""
     all_files = directory.rglob("**/*")  # Get all files and directories
-    return [_ for _ in all_files if _.is_file() and not should_exclude(_) and should_include(_)]
+    output = []
+    for _ in all_files:
+        if _.is_dir():
+            dir_files = get_filtered_files(_)
+            output.extend(dir_files)
+            continue
+        if not _.is_file():
+            continue
+        if should_exclude(_):
+            continue
+        if not should_include(_):
+            continue
+
+        output.append(_)
+
+    return output
 
 
 if __name__ == "__main__":
