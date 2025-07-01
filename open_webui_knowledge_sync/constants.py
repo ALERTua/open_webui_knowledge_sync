@@ -10,18 +10,18 @@ EXCLUDES = [
     r"**/wheels/**",
     r"**/*.egg-info/**",
     r"**/.venv/**",
-    r"**/*.py[oc]",
-    r"**/*.lock",
-    r"**/*.tmp",
-    r"**/*.typed",
-    r"**/*.gz",
-    r"**/*.zip",
-    r"**/*.rar",
-    r"**/*.7z",
-    r"**/*.whl",
+    r"**/*\.py[oc]",
+    r"**/*\.lock",
+    r"**/*\.tmp",
+    r"**/*\.typed",
+    r"**/*\.gz",
+    r"**/*\.zip",
+    r"**/*\.rar",
+    r"**/*\.7z",
+    r"**/*\.whl",
 ]
 
 INCLUDES = [
-    "*.*",
+    r"*\.*",
 ]
 REQUEST_TIMEOUT = 600
